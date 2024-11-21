@@ -1,2 +1,5 @@
 C:\Users\Emad\Desktop\BUT-Info\S5\R5.A05 Programmation Avancé\Spring\R5.A05-TP_Spring\src\main\java\com\TP\Spring\Application.java
-C:\Users\Emad\Desktop\BUT-Info\S5\R5.A05 Programmation Avancé\Spring\R5.A05-TP_Spring\src\main\java\com\TP\Spring\BonjourController.java
+C:\Users\Emad\Desktop\BUT-Info\S5\R5.A05 Programmation Avancé\Spring\R5.A05-TP_Spring\src\main\java\com\TP\Spring\repository\ArticleRepository.java
+C:\Users\Emad\Desktop\BUT-Info\S5\R5.A05 Programmation Avancé\Spring\R5.A05-TP_Spring\src\main\java\com\TP\Spring\controller\BonjourController.java
+C:\Users\Emad\Desktop\BUT-Info\S5\R5.A05 Programmation Avancé\Spring\R5.A05-TP_Spring\src\main\java\com\TP\Spring\controller\ArticleController.java
+C:\Users\Emad\Desktop\BUT-Info\S5\R5.A05 Programmation Avancé\Spring\R5.A05-TP_Spring\src\main\java\com\TP\Spring\model\Article.java
