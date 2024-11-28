@@ -10,9 +10,13 @@ public class Article {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String auteur;
     private LocalDateTime datePublication;
     private String contenu;
+
+    @ManyToOne
+    @JoinColumn(name = "utilisateur_id")
+    private Utilisateur auteur;
+
 
     @ElementCollection
     private List<String> likes;
@@ -33,11 +37,11 @@ public class Article {
         this.id = id;
     }
 
-    public String getAuteur() {
+    public Utilisateur getAuteur() {
         return auteur;
     }
 
-    public void setAuteur(String auteur) {
+    public void setAuteur(Utilisateur auteur) {
         this.auteur = auteur;
     }
 
