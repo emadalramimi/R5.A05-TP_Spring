@@ -1,10 +1,13 @@
-package com.tp.spring.model;
+package com.TP.Spring.model;
+
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 public class Utilisateur {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -13,7 +16,8 @@ public class Utilisateur {
     private String motDePasse;
     private String role; // moderator ou publisher
 
-    @OneToMany(mappedBy = "auteur")
+    @OneToMany(mappedBy = "auteur", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Article> articles;
 
     // Getters, setters, et constructeurs
@@ -64,5 +68,15 @@ public class Utilisateur {
 
     public void setArticles(List<Article> articles) {
         this.articles = articles;
+    }
+
+    @Override
+    public String toString() {
+        return "Utilisateur{" +
+                "id=" + id +
+                ", nomUtilisateur='" + nomUtilisateur + '\'' +
+                ", role='" + role + '\'' +
+                ", articles=" + articles.size() +
+                '}';
     }
 }

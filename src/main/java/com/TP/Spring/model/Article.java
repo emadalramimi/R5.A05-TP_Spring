@@ -1,11 +1,14 @@
 package com.TP.Spring.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
 public class Article {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -15,18 +18,14 @@ public class Article {
 
     @ManyToOne
     @JoinColumn(name = "utilisateur_id")
+    @JsonBackReference
     private Utilisateur auteur;
-
 
     @ElementCollection
     private List<String> likes;
 
     @ElementCollection
     private List<String> dislikes;
-
-    // Default constructor
-    public Article() {
-    }
 
     // Getters and setters
     public Long getId() {
@@ -35,14 +34,6 @@ public class Article {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Utilisateur getAuteur() {
-        return auteur;
-    }
-
-    public void setAuteur(Utilisateur auteur) {
-        this.auteur = auteur;
     }
 
     public LocalDateTime getDatePublication() {
@@ -59,6 +50,14 @@ public class Article {
 
     public void setContenu(String contenu) {
         this.contenu = contenu;
+    }
+
+    public Utilisateur getAuteur() {
+        return auteur;
+    }
+
+    public void setAuteur(Utilisateur auteur) {
+        this.auteur = auteur;
     }
 
     public List<String> getLikes() {
