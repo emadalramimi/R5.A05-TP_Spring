@@ -1,1 +1,11 @@
 com\TP\Spring\Application.class
+com\TP\Spring\security\TokenValidator.class
+com\TP\Spring\repository\UtilisateurRepository.class
+com\TP\Spring\model\Article.class
+com\TP\Spring\security\TokenGenerator.class
+com\TP\Spring\repository\ArticleRepository.class
+com\TP\Spring\security\OncePerRequestFilterR5A05.class
+com\TP\Spring\controller\ArticleController.class
+com\TP\Spring\controller\BonjourController.class
+com\TP\Spring\security\UserDetailsServiceR5A05.class
+com\TP\Spring\model\Utilisateur.class

@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.TP.Spring.ApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 21.969 s - in com.TP.Spring.ApplicationTests
